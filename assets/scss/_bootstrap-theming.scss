@@ -1,38 +1,68 @@
 @use "presets" as *;
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:focus,
-.navbar-inverse .navbar-nav > .active > a:hover {
-  background-color: $color-primary-dark;
-}
-
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  background-color: $color-primary-light;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  border-radius: 4px;
-  transition: background-color 0.5s;
-}
+@use "mixins" as *;
 
 .navbar-inverse {
   background-color: darken($color-dark, 4%);
-}
 
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-  background-color: $color-primary;
-}
+  .navbar-nav {
+    > .active > a {
+      background-color: $color-primary-dark;
 
-.navbar-left li {
-  margin: 5px 5px 5px 0;
-}
+      &:hover,
+      &:focus {
+        background-color: $color-primary-light;
+      }
+    }
 
-.navbar-right {
-  margin-right: 0;
+    > li > a {
+      transition: background-color 0.5s;
+      @include sm-min {
+        border-radius: 4px;
+      }
+      @include sm {
+        text-align: center;
+      }
 
-  li {
-    margin: 5px 0 5px 5px;
+      &:hover,
+      .navbar-inverse .navbar-nav > li > a:focus {
+        background-color: $color-primary;
+      }
+    }
   }
+}
+
+.navbar {
+  &-left {
+    li {
+      @include sm-min {
+        margin: 5px 5px 5px 0;
+      }
+    }
+  }
+
+  &-right {
+    @include sm-min {
+      margin: 0;
+    }
+    @include sm {
+      margin-top: -$gap * 0.5;
+      margin-bottom: $gap * 0.5;
+    }
+
+    li {
+      @include sm-min {
+        margin: 5px 0 5px 5px;
+      }
+    }
+  }
+}
+
+
+.navbar-header {
+  text-align: center;
+}
+
+.navbar-toggle {
+  float: none;
+  margin-right: 0;
 }

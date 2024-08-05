@@ -26,7 +26,7 @@
       @include xs {
         font-size: 2.5rem;
       }
-      
+
       @extend %text-shadow;
     }
 
@@ -38,5 +38,4 @@
       @extend %text-shadow;
     }
   }
-
 }
