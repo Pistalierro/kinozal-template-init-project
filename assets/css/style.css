@@ -40,6 +40,35 @@
     margin-right: 0;
 }
 
+.panel
+{
+    margin-bottom: 30px;
+
+    border: none;
+    background-color: #f4f4f4;
+}
+.panel-info > .panel-heading
+{
+    font-size: 1.25rem;
+
+    letter-spacing: .1em;
+
+    color: #fff;
+    border: none;
+    background-color: #df8a13;
+}
+.panel-body
+{
+    border: 1px solid #d5d5d5;
+    border-radius: 0 0 4px 4px;
+}
+
+.input-lg,
+.input-group-lg > .form-control
+{
+    font-size: .875rem;
+}
+
 *::before,
 *::after,
 *
@@ -97,6 +126,56 @@ body
     letter-spacing: .2em;
 
     color: #fff;
+}
+
+.main
+{
+    margin-bottom: 80px;
+}
+
+.left-sidebar
+{
+    margin-bottom: 80px;
+}
+.left-sidebar .panel:last-of-type
+{
+    margin-bottom: 0;
+}
+
+.vertical-slider
+{
+    overflow: hidden;
+
+    border-radius: 4px;
+}
+.vertical-slider__image
+{
+    width: 100%;
+}
+
+.user-login
+{
+    position: relative;
+}
+.user-login__tabs
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+    border: none;
+}
+.user-login__tabs a
+{
+    padding: 14px 5px 11px !important;
+
+    color: #d5d5d5;
+    border: none !important;
+    background-color: transparent !important;
+}
+.user-login__tabs .active a
+{
+    color: #fff !important;
 }
 @media (min-width: 576px)
 {
