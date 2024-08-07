@@ -92,3 +92,9 @@
     font-size: 0.875rem;
   }
 }
+
+.bg-warning {
+  background-color: $color-accent-light;
+  border-color: $color-accent;
+  color: $color-light;
+}

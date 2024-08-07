@@ -20,7 +20,6 @@
 
   &-title {
     margin-bottom: 1em;
-    font-family: $font-header;
   }
 
   &-row {
@@ -31,10 +30,6 @@
 .top-week {
   overflow: hidden;
   position: relative;
-
-  &-title {
-    font-family: $font-header;
-  }
 
   &-row {
     margin: 0 (-$gap * 0.5) (-$gap);
@@ -77,6 +72,41 @@
     .top-week-item__title,
     .new-film-item__title {
       color: $color-light;
+    }
+  }
+}
+
+.film-news {
+  position: relative;
+  overflow: hidden;
+
+  &-item {
+    p {
+      text-align: justify;
+    }
+
+    &__button {
+      float: right;
+      margin-bottom: $gap * 2;
+      transition: background-color 0.25s;
+    }
+
+    &__thumbnail {
+      transition: background-color 0.25s;
+    }
+
+    &:hover {
+      h3 {
+        color: $color-accent;
+      }
+
+      .thumbnail {
+        background-color: $color-accent;
+      }
+
+      .film-news-item__button {
+        background-color: $color-accent;
+      }
     }
   }
 }
