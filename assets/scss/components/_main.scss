@@ -3,4 +3,68 @@
 
 .main {
   margin-bottom: $gap-xl;
+
+  .site-search {
+    margin-bottom: $gap * 3;
+  }
+
+  .user-login {
+    margin-bottom: $gap * 4;
+
+  }
+}
+
+.top-films,
+.new-films {
+  overflow: hidden;
+  position: relative;
+
+  &-title {
+    margin-bottom: 1em;
+    font-family: $font-header;
+  }
+
+  &-row {
+    margin: 0 (-$gap * 0.5) (-$gap);
+  }
+}
+
+.top-film-item,
+.new-film-item {
+  margin-bottom: $gap;
+  padding: 0 ($gap * 0.5);
+
+  &__thumbnail {
+    margin-bottom: 0;
+    transition: background-color 0.25s;
+  }
+
+  &__caption {
+    text-align: center;
+  }
+
+  &__title {
+    @include text-shortener;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.25s;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    .top-film-item__thumbnail,
+    .new-film-item__thumbnail {
+      background-color: $color-accent;
+    }
+
+    .top-film-item__title,
+    .new-film-item__title {
+      color: $color-light;
+    }
+  }
 }

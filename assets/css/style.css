@@ -90,6 +90,24 @@ body
     font-size: 16px;
 }
 
+h1
+{
+    font-size: 3rem;
+
+    margin-top: calc(-15px / 3 * 2);
+}
+h1::after
+{
+    position: absolute;
+
+    width: 100%;
+    margin: .85em 0 0 15px;
+
+    content: '';
+
+    border-bottom: 3px solid #f0ad4f;
+}
+
 a
 {
     -webkit-transition: color .25s;
@@ -146,6 +164,97 @@ a:focus
 .main
 {
     margin-bottom: 80px;
+}
+.main .site-search
+{
+    margin-bottom: 45px;
+}
+.main .user-login
+{
+    margin-bottom: 60px;
+}
+
+.top-films,
+.new-films
+{
+    position: relative;
+
+    overflow: hidden;
+}
+.top-films-title,
+.new-films-title
+{
+    font-family: 'PT Serif', serif;
+
+    margin-bottom: 1em;
+}
+.top-films-row,
+.new-films-row
+{
+    margin: 0 -7.5px -15px;
+}
+
+.top-film-item,
+.new-film-item
+{
+    margin-bottom: 15px;
+    padding: 0 7.5px;
+}
+.top-film-item__thumbnail,
+.new-film-item__thumbnail
+{
+    margin-bottom: 0;
+
+    -webkit-transition: background-color .25s;
+            transition: background-color .25s;
+}
+.top-film-item__caption,
+.new-film-item__caption
+{
+    text-align: center;
+}
+.top-film-item__title,
+.new-film-item__title
+{
+    font-size: 1rem;
+    font-weight: 700;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+
+    -webkit-transition: color .25s;
+            transition: color .25s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.top-film-item__image,
+.new-film-item__image
+{
+    width: 100%;
+}
+.top-film-item:hover .top-film-item__thumbnail,
+.top-film-item:hover .new-film-item__thumbnail,
+.top-film-item:focus .top-film-item__thumbnail,
+.top-film-item:focus .new-film-item__thumbnail,
+.new-film-item:hover .top-film-item__thumbnail,
+.new-film-item:hover .new-film-item__thumbnail,
+.new-film-item:focus .top-film-item__thumbnail,
+.new-film-item:focus .new-film-item__thumbnail
+{
+    background-color: #df8a13;
+}
+.top-film-item:hover .top-film-item__title,
+.top-film-item:hover .new-film-item__title,
+.top-film-item:focus .top-film-item__title,
+.top-film-item:focus .new-film-item__title,
+.new-film-item:hover .top-film-item__title,
+.new-film-item:hover .new-film-item__title,
+.new-film-item:focus .top-film-item__title,
+.new-film-item:focus .new-film-item__title
+{
+    color: #fff;
 }
 
 .left-sidebar
@@ -269,7 +378,7 @@ a:focus
 }
 .top-films__item
 {
-    margin: 0 -1px;
+    margin: 0 -1px -1px;
     padding-right: 55px;
 
     -webkit-transition: color .3s;
