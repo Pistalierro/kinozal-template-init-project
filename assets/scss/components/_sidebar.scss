@@ -41,28 +41,26 @@
 }
 
 .site-news-item {
-
   $image-size: 75px;
   $image-size-with-padding: $image-size + 10;
 
   position: relative;
   clear: both;
-  min-height: $image-size-with-padding;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: calc(100% - #{image-size-with-padding});
-    height: 1px;
-    background-color: $color-gray;
-    bottom: 0;
-    right: 0;
+  &:not(:last-of-type) {
+    min-height: $image-size-with-padding;
+    margin-bottom: $gap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% - #{$image-size-with-padding});
+      height: 1px;
+      background-color: $color-gray;
+      bottom: -4px;
+      right: 0;
+    }
   }
-
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-
 
   &__thumbnail {
     float: left;
@@ -73,7 +71,6 @@
 
   &__title {
     margin-bottom: 0.5em;
-    color: $color-accent;
 
     a {
       @include block-shortener;
@@ -91,6 +88,53 @@
       background-color: $color-accent;
       border-color: $color-accent;
     }
+  }
+}
+
+.top-films {
+  &__body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &__list {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    background-color: transparent;
+    margin: 0 -1px;
+    color: $color-primary !important;
+    transition: color 0.3s;
+    padding-right: 55px;
+
+    &:first-of-type {
+      border-radius: 0;
+      border-top: none;
+    }
+
+    &:last-of-type {
+      border-radius: 0;
+      border-bottom: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-light !important;
+      background-color: $color-accent !important;
+      border-color: $color-accent !important;
+
+      .badge {
+        background-color: $color-dark;
+      }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 50%;
+    right: $gap;
+    transform: translateY(-50%);
   }
 }
 
