@@ -22,11 +22,25 @@ h1 {
   font-size: 3rem;
 
   &::after {
-    position: absolute;
+    @extend %title-after-line;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: ($gap * 4) 0 ($gap * 3) ($gap * 3);
+
+  &::before {
     content: "";
-    width: 100%;
+    position: absolute;
     border-bottom: 3px solid $color-accent-light;
-    margin: 0.85em 0 0 $gap;
+    width: 30px;
+    margin: 0.25em 0 0 0;
+    left: 0;
+  }
+
+  &::after {
+    @extend %title-after-line;
   }
 }
 

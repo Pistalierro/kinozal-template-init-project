@@ -14,7 +14,6 @@
   }
 }
 
-.top-films,
 .new-films {
   overflow: hidden;
   position: relative;
@@ -29,7 +28,20 @@
   }
 }
 
-.top-film-item,
+.top-week {
+  overflow: hidden;
+  position: relative;
+
+  &-title {
+    font-family: $font-header;
+  }
+
+  &-row {
+    margin: 0 (-$gap * 0.5) (-$gap);
+  }
+}
+
+.top-week-item,
 .new-film-item {
   margin-bottom: $gap;
   padding: 0 ($gap * 0.5);
@@ -57,12 +69,12 @@
 
   &:hover,
   &:focus {
-    .top-film-item__thumbnail,
+    .top-week-item__thumbnail,
     .new-film-item__thumbnail {
       background-color: $color-accent;
     }
 
-    .top-film-item__title,
+    .top-week-item__title,
     .new-film-item__title {
       color: $color-light;
     }

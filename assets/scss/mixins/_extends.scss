@@ -3,3 +3,11 @@
 %text-shadow {
   text-shadow: 0 0 5px $color-black, 0 0 10px $color-black, 0 0 20px $color-black;
 }
+
+%title-after-line {
+  position: absolute;
+  content: "";
+  width: 100%;
+  border-bottom: 3px solid $color-accent-light;
+  margin: 0.85em 0 0 $gap;
+}

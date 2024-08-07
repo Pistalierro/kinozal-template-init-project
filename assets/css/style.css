@@ -4,6 +4,19 @@
     text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
 }
 
+h1::after,
+h2::after
+{
+    position: absolute;
+
+    width: 100%;
+    margin: .85em 0 0 15px;
+
+    content: '';
+
+    border-bottom: 3px solid #f0ad4f;
+}
+
 .navbar-inverse
 {
     background-color: #191919;
@@ -96,18 +109,24 @@ h1
 
     margin-top: calc(-15px / 3 * 2);
 }
-h1::after
+h2
+{
+    font-size: 2.5rem;
+
+    margin: 60px 0 45px 45px;
+}
+h2::before
 {
     position: absolute;
+    left: 0;
 
-    width: 100%;
-    margin: .85em 0 0 15px;
+    width: 30px;
+    margin: .25em 0 0 0;
 
     content: '';
 
     border-bottom: 3px solid #f0ad4f;
 }
-
 a
 {
     -webkit-transition: color .25s;
@@ -174,33 +193,45 @@ a:focus
     margin-bottom: 60px;
 }
 
-.top-films,
 .new-films
 {
     position: relative;
 
     overflow: hidden;
 }
-.top-films-title,
 .new-films-title
 {
     font-family: 'PT Serif', serif;
 
     margin-bottom: 1em;
 }
-.top-films-row,
 .new-films-row
 {
     margin: 0 -7.5px -15px;
 }
 
-.top-film-item,
+.top-week
+{
+    position: relative;
+
+    overflow: hidden;
+}
+.top-week-title
+{
+    font-family: 'PT Serif', serif;
+}
+.top-week-row
+{
+    margin: 0 -7.5px -15px;
+}
+
+.top-week-item,
 .new-film-item
 {
     margin-bottom: 15px;
     padding: 0 7.5px;
 }
-.top-film-item__thumbnail,
+.top-week-item__thumbnail,
 .new-film-item__thumbnail
 {
     margin-bottom: 0;
@@ -208,12 +239,12 @@ a:focus
     -webkit-transition: background-color .25s;
             transition: background-color .25s;
 }
-.top-film-item__caption,
+.top-week-item__caption,
 .new-film-item__caption
 {
     text-align: center;
 }
-.top-film-item__title,
+.top-week-item__title,
 .new-film-item__title
 {
     font-size: 1rem;
@@ -229,29 +260,29 @@ a:focus
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.top-film-item__image,
+.top-week-item__image,
 .new-film-item__image
 {
     width: 100%;
 }
-.top-film-item:hover .top-film-item__thumbnail,
-.top-film-item:hover .new-film-item__thumbnail,
-.top-film-item:focus .top-film-item__thumbnail,
-.top-film-item:focus .new-film-item__thumbnail,
-.new-film-item:hover .top-film-item__thumbnail,
+.top-week-item:hover .top-week-item__thumbnail,
+.top-week-item:hover .new-film-item__thumbnail,
+.top-week-item:focus .top-week-item__thumbnail,
+.top-week-item:focus .new-film-item__thumbnail,
+.new-film-item:hover .top-week-item__thumbnail,
 .new-film-item:hover .new-film-item__thumbnail,
-.new-film-item:focus .top-film-item__thumbnail,
+.new-film-item:focus .top-week-item__thumbnail,
 .new-film-item:focus .new-film-item__thumbnail
 {
     background-color: #df8a13;
 }
-.top-film-item:hover .top-film-item__title,
-.top-film-item:hover .new-film-item__title,
-.top-film-item:focus .top-film-item__title,
-.top-film-item:focus .new-film-item__title,
-.new-film-item:hover .top-film-item__title,
+.top-week-item:hover .top-week-item__title,
+.top-week-item:hover .new-film-item__title,
+.top-week-item:focus .top-week-item__title,
+.top-week-item:focus .new-film-item__title,
+.new-film-item:hover .top-week-item__title,
 .new-film-item:hover .new-film-item__title,
-.new-film-item:focus .top-film-item__title,
+.new-film-item:focus .top-week-item__title,
 .new-film-item:focus .new-film-item__title
 {
     color: #fff;
