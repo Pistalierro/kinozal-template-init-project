@@ -1,0 +1,22 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.footer {
+  background-color: $color-dark;
+  color: $color-gray;
+  padding-top: $gap * 3;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    color: $color-gray-dark;
+  }
+
+  &-fifth {
+    text-align: center;
+    margin: 20px 0;
+  }
+}

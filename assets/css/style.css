@@ -196,6 +196,30 @@ a:focus
     color: #fff;
 }
 
+.footer
+{
+    padding-top: 45px;
+
+    color: #d5d5d5;
+    background-color: #232323;
+}
+.footer ul
+{
+    padding: 0;
+
+    list-style: none;
+}
+.footer a
+{
+    color: #6f6f6f;
+}
+.footer-fifth
+{
+    margin: 20px 0;
+
+    text-align: center;
+}
+
 .main
 {
     margin-bottom: 80px;
@@ -303,6 +327,8 @@ a:focus
     position: relative;
 
     overflow: hidden;
+
+    margin-bottom: -10px;
 }
 .film-news-item p
 {

@@ -15,9 +15,6 @@ const pug = require('gulp-pug')
 const option = process.argv[3]
 
 const PATH = {
-    // cssFolder: './assets/css/',
-    // cssAllFiles: './assets/css/*.css',
-    // cssRootFile: './assets/css/style.css',
     scssFolder: './assets/scss/',
     scssAllFiles: './assets/scss/**/*.scss',
     scssRootFile: './assets/scss/style.scss',
@@ -27,8 +24,9 @@ const PATH = {
     cssFolder: './assets/css/',
     cssAllFiles: './assets/css/*.css',
     cssRootFile: './assets/css/style.css',
-    htmlFolder: './',
-    htmlAllFiles: './*.html',
+    // htmlFolder: './',
+    htmlFolder: './assets/pages',
+    htmlAllFiles: './assets/pages/*.html',
     jsFolder: './assets/js/',
     jsAllFiles: './assets/js/**/*.js',
     imgFolder: './assets/images/'
